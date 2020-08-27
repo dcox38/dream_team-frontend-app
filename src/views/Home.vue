@@ -11,7 +11,7 @@
 export default {
   data: function() {
     return {
-      message: "Well hello there"
+      message: "This is the shit"
     };
   },
   created: function() {},
