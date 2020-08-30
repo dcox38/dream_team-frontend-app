@@ -12,6 +12,7 @@
       <p>Left Field: {{ team.left_field }}</p>
       <p>Center Field: {{ team.center_field }}</p>
       <p>Right Field: {{ team.right_field }}</p>
+      <br>
     </div>
 
 
