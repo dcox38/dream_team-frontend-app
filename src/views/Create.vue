@@ -1,11 +1,18 @@
 <template>
   <div class="home">
+    <h1>{{ message }}</h1>
+    <p>name: <input v-model="newTeamName" type="text"></p>
+    <p>pitcher: <input v-model="newTeamPitcher" type="text"></p>
+    <p>catcher: <input v-model="newTeamCatcher" type="text"></p>
+    <p>first_base: <input v-model="newTeamFirstBase" type="text"></p>
+    <p>second_base: <input v-model="newTeamSecondBase" type="text"></p>
+    <p>third_base: <input v-model="newTeamThirdBase" type="text"></p>
+    <p>shortstop: <input v-model="newTeamShortstop" type="text"></p>
+    <p>left_field: <input v-model="newTeamLeftField" type="text"></p>
+    <p>center_field: <input v-model="newTeamCenterField" type="text"></p>
+    <p>right_field: <input v-model="newTeamRightField" type="text"></p>
 
-    <div>
-      <label class="typo__label">Select with search</label>
-      <multiselect v-model="value" :options="options" :custom-label="nameWithLang" placeholder="Select one" label="name" track-by="name"></multiselect>
-      <pre class="language-json"><code>{{ value  }}</code></pre>
-    </div>
+    <button v-on:click="addTeam()">Create new team</button>
 
   </div>
 </template>
@@ -16,23 +23,22 @@
 <script>
 
 import axios from "axios"
-import Multiselect from 'vue-multiselect'
 
 export default {
-  components: {
-    Multiselect
-  },
   data: function() {
     return {
-      value: { name: 'Vue.js', language: 'JavaScript' },
-      options: [
-        { name: 'Vue.js', language: 'JavaScript' },
-        { name: 'Rails', language: 'Ruby' },
-        { name: 'Sinatra', language: 'Ruby' },
-        { name: 'Laravel', language: 'PHP' },
-        { name: 'Phoenix', language: 'Elixir' }
-      ]
-    }
+      message: "Create a new team",
+      newTeamName: "",
+      newTeamPitcher: "",
+      newTeamCatcher: "",
+      newTeamFirstBase: "",
+      newTeamSecondBase: "",
+      newTeamThirdBase: "",
+      newTeamShortstop: "",
+      newTeamLeftField: "",
+      newTeamCenterField: "",
+      newTeamRightField: "",
+    };
   },
   created: function() {},
   methods: {
@@ -50,9 +56,6 @@ export default {
         console.log(response.data);
         this.teams.push(response.data);
       })
-    },
-    nameWithLang ({ name, language }) {
-      return `${name} — [${language}]`
     }
   }
 };
