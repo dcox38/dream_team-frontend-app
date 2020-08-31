@@ -6,6 +6,7 @@
       <router-link to="/login">Login</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/teams">My Teams</router-link> |
+      <router-link to="/create">Create a New Team</router-link> |
     </div> 
     <router-view/>
   </div>

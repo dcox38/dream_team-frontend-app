@@ -2,6 +2,11 @@
   <div class="home">
     <h1>{{ message }}</h1>
 
+    <!-- I WOULD LIKE THIS BUTTON TO LINK TO CREATE NEW TEAM PAGE -->
+    <!-- <button v-on:click="addTeam()">Create a new team</button> -->
+
+    <hr>
+
     <div v-for="team in teams">
       <p>Pitcher: {{ team.pitcher }}</p>
       <p>Catcher: {{ team.catcher }}</p>
@@ -12,7 +17,7 @@
       <p>Left Field: {{ team.left_field }}</p>
       <p>Center Field: {{ team.center_field }}</p>
       <p>Right Field: {{ team.right_field }}</p>
-      <br>
+      <hr>
     </div>
 
 
@@ -29,7 +34,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Here you should see your teams",
+      message: "My teams",
       teams: []
     };
   },
@@ -43,7 +48,7 @@ export default {
         console.log(response.data);
         this.teams = response.data
       })
-    }
+    },
   }
 };
 </script>
