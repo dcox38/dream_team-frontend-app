@@ -7,6 +7,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/teams">My Teams</router-link> |
       <router-link to="/create">Create a New Team</router-link> |
+      <router-link to="/teamcreate">The other way to create a New Team</router-link> |
     </div> 
     <router-view/>
   </div>
