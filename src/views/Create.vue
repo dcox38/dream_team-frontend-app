@@ -44,12 +44,20 @@ export default {
   methods: {
     addTeam: function() {
       console.log('adding a team');
+      console.log(this.newTeamName);
 
       var params = {
-        name: "Rockies",
-        pitcher: "5",
-        catcher: "7",
-
+        name: this.newTeamName,
+        pitcher: this.newTeamPitcher,
+        catcher: this.newTeamCatcher,
+        first_base: this.newTeamFirstBase,
+        second_base: this.newTeamSecondBase,
+        third_base: this.newTeamThirdBase,
+        shortstop: this.newTeamShortstop,
+        left_field: this.newTeamLeftField,
+        center_field: this.newTeamCenterField,
+        right_field: this.newTeamRightField,
+        
       }
 
       axios.post('api/teams', params).then(response => {
