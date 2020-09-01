@@ -1,5 +1,8 @@
 <template>
 <div>
+
+  <input type="text" class="form-control" placeholder="Team Name" v-model="name">
+   
   <p>Pitcher:</p>
   <select v-model='pitcher'>
     <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -75,6 +78,7 @@ export default {
       left_field: '',
       center_field: '',
       right_field: '',
+      name: '',
       players:[]
     };
   },
@@ -102,10 +106,11 @@ export default {
         shortstop: this.shortstop,
         left_field: this.left_field,
         center_field: this.center_field,
-        right_field: this.right_field
+        right_field: this.right_field,
+        name: this.name
       }
       axios.post('/api/teams', params).then(response => {
-        // this.pitcher.push
+        this.$router.push("/teams");
 
       })
       
