@@ -64,7 +64,7 @@
 
 <script>
 
-import axios from "axios"
+import axios from "axios";
 
 export default {
   data: function() {
@@ -84,15 +84,25 @@ export default {
     };
   },
   created: function() {
-    this.getPlayerName()
+    this.getPlayerName();
   },
   methods: {
     getPlayerName: function() {
       console.log('adding a player...');
       axios.get('api/players').then(response => {
-        // console.log(response.data);
+        console.log(response.data);
         this.players = response.data;
-      })
+        console.log(this.war);
+      });
+    },
+    totalWar: function() {
+      var totalwar = {
+        
+  
+      };
+
+
+
     },
     createTeam: function() {
       console.log('create team...');
@@ -109,16 +119,22 @@ export default {
         center_field: this.center_field,
         right_field: this.right_field,
         name: this.name,
-        total_war: 765
-      }
+        total_war: 543
+      };
       axios.post('/api/teams', params).then(response => {
         console.log(response.data);
         // console.log(player.war);
         this.$router.push("/teams");
 
-      })
+      });
       
     }
   }
 };
 </script>
+
+// 1. Get player war ( This is already happening! )
+// 2. Add together all player wars
+      // - Create a function that establishes a varibable called total_war that adds together all player wars.
+
+// 3. Post that number to teams model as total war ( This is already happening! )

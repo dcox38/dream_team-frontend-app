@@ -3,8 +3,10 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
 import Teams from "../views/Teams.vue";
 import TeamCreate from "../views/teamcreate.vue";
+import Games from "../views/Games.vue";
 
 Vue.use(VueRouter);
 
@@ -15,6 +17,11 @@ const routes = [
     component: Home
   }, 
   {
+    path: '/logout',
+    name: 'logout',
+    component: Logout
+  },
+  {
     path: '/login',
     name: 'login',
     component: Login
@@ -23,6 +30,11 @@ const routes = [
     path: "/signup", 
     name: "signup", 
     component: Signup 
+  },
+  { 
+    path: "/games", 
+    name: "games", 
+    component: Games 
   },
   { 
     path: "/teams", 

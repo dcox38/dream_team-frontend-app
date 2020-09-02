@@ -11,7 +11,7 @@
 export default {
   data: function() {
     return {
-      message: "You are at home plate"
+      message: "There should be some games happening here"
     };
   },
   created: function() {},

@@ -4,9 +4,11 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/signup">Signup</router-link> |
       <router-link to="/login">Login</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/teams">My Teams</router-link> |
       <router-link to="/teamcreate">Create a New Team</router-link> |
+      <router-link to="/teams">My Teams</router-link> |
+      <router-link to="/games">Start a Game</router-link> |
+      <router-link to="/about">FAQ</router-link> |
+      <router-link to="/logout">Logout</router-link> |
     </div> 
     <router-view/>
   </div>

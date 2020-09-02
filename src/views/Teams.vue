@@ -2,9 +2,6 @@
   <div class="home">
     <h1>{{ message }}</h1>
 
-    <!-- I WOULD LIKE THIS BUTTON TO LINK TO CREATE NEW TEAM PAGE -->
-    <!-- <button v-on:click="addTeam()">Create a new team</button> -->
-
     <hr>
 
     <div v-for="team in teams">
@@ -35,7 +32,7 @@ export default {
   data: function() {
     return {
       message: "My teams",
-      teams: []
+      teams: [],
     };
   },
   created: function() {
@@ -46,8 +43,8 @@ export default {
       console.log('in teams index');
       axios.get('api/teams').then(response => {
         console.log(response.data);
-        this.teams = response.data
-      })
+        this.teams = response.data;
+      });
     },
   }
 };
