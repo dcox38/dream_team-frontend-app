@@ -79,6 +79,7 @@ export default {
       center_field: '',
       right_field: '',
       name: '',
+      war: '',
       players:[]
     };
   },
@@ -107,9 +108,12 @@ export default {
         left_field: this.left_field,
         center_field: this.center_field,
         right_field: this.right_field,
-        name: this.name
+        name: this.name,
+        total_war: 765
       }
       axios.post('/api/teams', params).then(response => {
+        console.log(response.data);
+        // console.log(player.war);
         this.$router.push("/teams");
 
       })
