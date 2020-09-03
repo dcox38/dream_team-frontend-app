@@ -5,7 +5,19 @@
   <select v-model='your_team'>
     <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
   </select>
+
   <hr>
+
+      <p>Competitor:</p>
+  <select v-model='your_team'>
+    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+  </select>
+  
+  <hr>
+
+  <button> Play Ball! </button>
+
+
   </div>
 </template>
 
@@ -35,6 +47,17 @@ export default {
         this.teams = response.data;
       });
     },
+    createTeam: function() {
+      console.log('create game...');
+      var params = {
+        winner_user_id: this.winner_user_id
+      };
+      axios.post('/api/games', params).then(response => {
+        console.log(response.data);
+        this.$router.push("/winner");
+
+      });
+    }
   }
 };
 </script>

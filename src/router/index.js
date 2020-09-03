@@ -7,6 +7,7 @@ import Logout from "../views/Logout.vue";
 import Teams from "../views/Teams.vue";
 import TeamCreate from "../views/teamcreate.vue";
 import Games from "../views/Games.vue";
+import Winner from "../views/Winner.vue";
 
 Vue.use(VueRouter);
 
@@ -40,6 +41,11 @@ const routes = [
     path: "/teams", 
     name: "teams", 
     component: Teams 
+  },
+  { 
+    path: "/winner", 
+    name: "winner", 
+    component: Winner 
   },
   { 
     path: "/teamcreate", 
