@@ -92,17 +92,7 @@ export default {
       axios.get('api/players').then(response => {
         console.log(response.data);
         this.players = response.data;
-        console.log(this.war);
       });
-    },
-    totalWar: function() {
-      var totalwar = {
-        
-  
-      };
-
-
-
     },
     createTeam: function() {
       console.log('create team...');
@@ -119,11 +109,10 @@ export default {
         center_field: this.center_field,
         right_field: this.right_field,
         name: this.name,
-        total_war: 543
+        total_war: 54
       };
       axios.post('/api/teams', params).then(response => {
         console.log(response.data);
-        // console.log(player.war);
         this.$router.push("/teams");
 
       });
@@ -135,6 +124,6 @@ export default {
 
 // 1. Get player war ( This is already happening! )
 // 2. Add together all player wars
-      // - Create a function that establishes a varibable called total_war that adds together all player wars.
+      // - Create a function that establishes a variable called total_war that adds together all player wars.
 
-// 3. Post that number to teams model as total war ( This is already happening! )
+// 3. Post number to teams model as total war ( This is already happening! )

@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
+
+      <p>Your Team:</p>
+  <select v-model='your_team'>
+    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+  </select>
+  <hr>
   </div>
 </template>
 
@@ -8,13 +13,28 @@
 </style>
 
 <script>
+
+import axios from "axios";
+
+
 export default {
   data: function() {
     return {
-      message: "There should be some games happening here"
+      teams:[],
+      your_team: ''
     };
   },
-  created: function() {},
-  methods: {}
+  created: function() {
+    this.getTeamName();
+  },
+  methods: {
+    getTeamName: function() {
+      console.log('adding a team...');
+      axios.get('api/teams').then(response => {
+        console.log(response.data);
+        this.teams = response.data;
+      });
+    },
+  }
 };
 </script>
