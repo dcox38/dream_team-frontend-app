@@ -62,6 +62,9 @@
 </div>
 </template>
 
+<style>
+</style>
+
 <script>
 
 import axios from "axios";
@@ -109,7 +112,6 @@ export default {
         center_field: this.center_field,
         right_field: this.right_field,
         name: this.name,
-        total_war: 54
       };
       axios.post('/api/teams', params).then(response => {
         console.log(response.data);
