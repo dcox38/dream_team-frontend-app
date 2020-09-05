@@ -9,14 +9,13 @@
   <hr>
 
       <p>Competitor:</p>
-  <select v-model='your_team'>
+  <select v-model='not_your_team'>
     <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
   </select>
   
   <hr>
 
-  <button> Play Ball! </button>
-
+  <button v-on:click="createGame"> Play Ball! </button>
 
   </div>
 </template>
@@ -32,8 +31,9 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      teams:[],
-      your_team: ''
+      your_team: '',
+      not_your_team: '',
+      teams:[]
     };
   },
   created: function() {
@@ -47,10 +47,13 @@ export default {
         this.teams = response.data;
       });
     },
-    createTeam: function() {
+    createGame: function() {
       console.log('create game...');
+      console.log(this.your_team);
+      console.log(this.not_your_team);
       var params = {
-        winner_user_id: this.winner_user_id
+        team_one_id: this.your_team,
+        team_two_id: this.not_your_team
       };
       axios.post('/api/games', params).then(response => {
         console.log(response.data);

@@ -116,14 +116,7 @@ export default {
         this.$router.push("/teams");
 
       });
-      
     }
   }
 };
 </script>
-
-// 1. Get player war ( This is already happening! )
-// 2. Add together all player wars
-      // - Create a function that establishes a variable called total_war that adds together all player wars.
-
-// 3. Post number to teams model as total war ( This is already happening! )
