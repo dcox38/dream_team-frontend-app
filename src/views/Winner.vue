@@ -2,7 +2,8 @@
   <div class="home">
     <h1> And the winner is: </h1>
     <div v-for="game in games">
-      <p> {{ game.winner_name }}</p>
+      <h1> {{ game.winner_name }}</h1>
+      <h1> {{ game.team_one_total_war }}</h1>
 
 
     </div>
@@ -36,7 +37,8 @@ export default {
       axios.get('api/games').then(response => {
         console.log(response.data);
         this.games = response.data;
-      })
+        this.game = response.data[-1];
+      });
     }
   }
 };
