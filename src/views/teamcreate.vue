@@ -1,7 +1,7 @@
 <template>
 <div>
 
-   <header class="masthead text-center text-white">
+   <header style="background-image:url('img/02.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">Create a New Team</h1>
@@ -16,63 +16,191 @@
     </header>
 
   <input type="text" class="form-control" placeholder="Team Name" v-model="name">
-   
-  <p>Pitcher:</p>
-  <select v-model='pitcher'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
 
-  <p>Catcher:</p>
-  <select v-model='catcher'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Pitcher:</h2>
+              <select v-model='pitcher'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>First Base:</p>
-  <select v-model='first_base'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Catcher:</h2>
+              <select v-model='catcher'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Second Base:</p>
-  <select v-model='second_base'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">First Base:</h2>
+              <select v-model='first_base'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Third Base:</p>
-  <select v-model='third_base'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Second Base:</h2>
+              <select v-model='second_base'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Shortstop:</p>
-  <select v-model='shortstop'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Third Base:</h2>
+              <select v-model='third_base'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Left Field:</p>
-  <select v-model='left_field'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Shortstop:</h2>
+              <select v-model='shortstop'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Center Field:</p>
-  <select v-model='center_field'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Left Field:</h2>
+              <select v-model='left_field'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <p>Right Field:</p>
-  <select v-model='right_field'>
-    <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
-  </select>
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Center Field:</h2>
+              <select v-model='center_field'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <button v-on:click="createTeam"> Create team </button>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Right Field:</h2>
+              <select v-model='right_field'>
+                <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+  <!-- <button v-on:click="createTeam"> Create team </button> -->
+
+  <a href v-on:click="createTeam" class="btn btn-primary btn-xl rounded-pill mt-5">Create Team</a>
+<hr>
 </div>
 </template>
 

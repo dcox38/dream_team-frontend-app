@@ -21,6 +21,12 @@
             <li class="nav-item">
               <a class="nav-link" href="teamcreate">Create a New Team</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games">Start a New Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -63,7 +69,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-black">
       <div class="container">
-        <p class="m-0 text-center text-white small">My Super Awesome Website That I Made All By Myself</p>
+        <p class="m-0 text-center text-white medium">My Super Awesome Website That I Made All By Myself</p>
       </div>
       <!-- /.container -->
     </footer>

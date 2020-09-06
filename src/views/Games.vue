@@ -1,21 +1,61 @@
 <template>
   <div class="home">
 
-      <p>Your Team:</p>
-  <select v-model='your_team'>
-    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
-  </select>
+     <header style="background-image:url('img/03.jpg')" class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Start a New Game</h1>
+          <!-- <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2> -->
+          <!-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> -->
+        </div>
+      </div>
+      <!-- <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div> -->
+    </header>
 
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Your Team:</h2>
+                <select v-model='your_team'>
+                  <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+                </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p>Competitor:</p>
-  <select v-model='not_your_team'>
-    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
-  </select>
-  
-  <hr>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-1">
+              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-1">
+              <h2 class="display-8">Competitor:</h2>
+                  <select v-model='not_your_team'>
+                    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+                  </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <button v-on:click="createGame"> Play Ball! </button>
+  <a href v-on:click="createGame" class="btn btn-primary btn-xl rounded-pill mt-5">Play Ball!</a>
 
   </div>
 </template>

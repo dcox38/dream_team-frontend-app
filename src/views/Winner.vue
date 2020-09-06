@@ -1,6 +1,22 @@
 <template>
   <div class="home">
-    <h1> And the winner is: </h1>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">And The Winner Is:</h1>
+          <!-- <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2> -->
+          <!-- <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> -->
+        </div>
+      </div>
+      <!-- <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div> -->
+    </header>
+
+
+    <!-- <h1> And the winner is: </h1> -->
     <div v-for="game in games">
       <h1> {{ game.winner_name }}</h1>
       <h1> {{ game.team_one_total_war }}</h1>
