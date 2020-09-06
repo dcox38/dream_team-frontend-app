@@ -2,8 +2,13 @@
   <div class="home">
     <h1> And the winner is: </h1>
     <div v-for="game in games">
-      <p> {{ game.winner_user_id }}</p>
+      <p> {{ game.winner_name }}</p>
+
+
     </div>
+    <!-- <h1>{{ message }}</h1> -->
+    <!-- <h1>{{ games }}</h1> -->
+
   </div>
 </template>
 
