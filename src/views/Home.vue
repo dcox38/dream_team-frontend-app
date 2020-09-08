@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <header style="background-image:url('img/homeplate.jpg')" class="masthead text-center text-white">
+   <header style="background-image:url('img/20.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-40">Home Plate</h1>

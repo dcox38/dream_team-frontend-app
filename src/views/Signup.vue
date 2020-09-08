@@ -1,7 +1,7 @@
 <template>
   <div class="signup">
 
-    <header class="masthead text-center text-white">
+    <header style="background-image:url('img/23.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">Signup</h1>

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-     <header style="background-image:url('img/05.jpg')" class="masthead text-center text-white">
+     <header style="background-image:url('img/16.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">Start a New Game</h1>
@@ -56,6 +56,7 @@
     </section>
 
   <a href v-on:click="createGame" class="btn btn-primary btn-xl rounded-pill mt-5">Play Ball!</a>
+  <hr>
 
   </div>
 </template>

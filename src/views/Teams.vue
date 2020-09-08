@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <header class="masthead text-center text-white">
+    <header style="background-image:url('img/18.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">My Teams</h1>

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
 
-      <header style="background-image:url('img/06.jpg')" class="masthead text-center text-white">
+      <header style="background-image:url('img/12.jpg')" class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">Login</h1>
@@ -15,22 +15,24 @@
       <div class="bg-circle-4 bg-circle"></div> -->
     </header>
 
+    <div class="masthead-content">
+      <form v-on:submit.prevent="submit()">
+        <!-- <h1>Login</h1> -->
+        <ul>
+          <li class="text-danger" v-for="error in errors">{{ error }}</li>
+        </ul>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" class="form-control" v-model="email">
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" class="form-control" v-model="password">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
 
-    <form v-on:submit.prevent="submit()">
-      <!-- <h1>Login</h1> -->
-      <ul>
-        <li class="text-danger" v-for="error in errors">{{ error }}</li>
-      </ul>
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email">
-      </div>
-      <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
   </div>
 </template>
 
