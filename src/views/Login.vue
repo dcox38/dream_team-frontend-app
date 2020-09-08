@@ -15,23 +15,28 @@
       <div class="bg-circle-4 bg-circle"></div> -->
     </header>
 
-    <div class="masthead-content">
-      <form v-on:submit.prevent="submit()">
-        <!-- <h1>Login</h1> -->
-        <ul>
-          <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
-        <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
+    <section>
+      <div class="container">
+        <div class="d-flex p-3 text-black justify-content-center">
+            <form v-on:submit.prevent="submit()">
+              <!-- <h1>Login</h1> -->
+              <ul>
+                <li class="text-danger" v-for="error in errors">{{ error }}</li>
+              </ul>
+              <div class="form-group">
+                <h2 class="display-12">Email:</h2>
+                <input type="email" class="form-control" v-model="email">
+              </div>
+              <div class="form-group">
+                <h2 class="display-12">Password:</h2>
+                <input type="password" class="form-control" v-model="password">
+              </div>
+              <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
         </div>
-        <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
-      </form>
-    </div>
+     </div>
+    </section>
+
 
   </div>
 </template>

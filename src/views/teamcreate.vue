@@ -15,7 +15,16 @@
       <div class="bg-circle-4 bg-circle"></div> -->
     </header>
 
-  <input type="text" class="container" placeholder="Team Name" v-model="name">
+    <section>
+      <div class="container">
+        <div class="d-flex p-3 text-black justify-content-center">
+          <h2 class="display-12">Team Name :</h2>
+          <input type="text" class="center" v-model="name">
+        </div>
+      </div>
+    </section>
+
+
 
     <section>
       <div class="container">
