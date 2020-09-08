@@ -30,7 +30,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-info text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Catcher :</h2>
               <select v-model='catcher'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -41,7 +41,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-warning text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">First Base :</h2>
               <select v-model='first_base'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -52,7 +52,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-primary text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Second Base :</h2>
               <select v-model='second_base'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -63,7 +63,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-info text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Third Base :</h2>
               <select v-model='third_base'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -74,7 +74,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-warning text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Shortstop :</h2>
               <select v-model='shortstop'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -85,7 +85,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-primary text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Left Field :</h2>
               <select v-model='left_field'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -96,7 +96,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-info text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Center Field :</h2>
               <select v-model='center_field'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>
@@ -107,7 +107,7 @@
 
     <section>
       <div class="container">
-        <div class="d-flex p-3 bg-warning text-white justify-content-center">
+        <div class="d-flex p-3 text-black justify-content-center">
           <h2 class="display-12">Right Field :</h2>
               <select v-model='right_field'>
                 <option v-for='player in players' :value='player.id'>{{ player.first_name + " " + player.last_name }}</option>

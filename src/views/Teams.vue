@@ -16,25 +16,18 @@
     </header>
     <section>
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-1">
-              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div v-for="team in teams" class="p-5">
-              <h1 class="display-4">{{ team.name }}</h1>
-              <p>Pitcher: {{ team.pitcher.first_name + " " + team.pitcher.last_name }}</p>
-              <p>Catcher: {{ team.catcher.first_name + " " + team.catcher.last_name }}</p>
-              <p>First Base: {{ team.first_base.first_name + " " + team.first_base.last_name }}</p>
-              <p>Second Base: {{ team.second_base.first_name + " " + team.second_base.last_name }}</p>
-              <p>Third Base: {{ team.third_base.first_name + " " + team.third_base.last_name }}</p>
-              <p>Shortstop: {{ team.shortstop.first_name + " " + team.shortstop.last_name }}</p>
-              <p>Left Field: {{ team.left_field.first_name + " " + team.left_field.last_name }}</p>
-              <p>Center Field: {{ team.center_field.first_name + " " + team.center_field.last_name }}</p>
-              <p>Right Field: {{ team.right_field.first_name + " " + team.right_field.last_name }}</p>
-            </div>
+        <div class="justify-content-center">
+          <div v-for="team in teams" class="p-5">
+            <h1 class="display-4">{{ team.name }}</h1>
+            <p>Pitcher: {{ team.pitcher.first_name + " " + team.pitcher.last_name }}</p>
+            <p>Catcher: {{ team.catcher.first_name + " " + team.catcher.last_name }}</p>
+            <p>First Base: {{ team.first_base.first_name + " " + team.first_base.last_name }}</p>
+            <p>Second Base: {{ team.second_base.first_name + " " + team.second_base.last_name }}</p>
+            <p>Third Base: {{ team.third_base.first_name + " " + team.third_base.last_name }}</p>
+            <p>Shortstop: {{ team.shortstop.first_name + " " + team.shortstop.last_name }}</p>
+            <p>Left Field: {{ team.left_field.first_name + " " + team.left_field.last_name }}</p>
+            <p>Center Field: {{ team.center_field.first_name + " " + team.center_field.last_name }}</p>
+            <p>Right Field: {{ team.right_field.first_name + " " + team.right_field.last_name }}</p>
           </div>
         </div>
       </div>

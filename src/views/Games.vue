@@ -17,19 +17,12 @@
 
     <section>
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-1">
-              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-1">
-              <h2 class="display-8">Your Team:</h2>
-                <select v-model='your_team'>
-                  <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
-                </select>
-            </div>
+        <div class="justify-content-center">
+          <div class="p-1">
+            <h2 class="display-8">Your Team:</h2>
+              <select v-model='your_team'>
+                <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+              </select>
           </div>
         </div>
       </div>
@@ -37,25 +30,18 @@
 
     <section>
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-1">
-              <!-- <img class="img-fluid rounded-circle" src="img/01.jpg" alt=""> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-1">
-              <h2 class="display-8">Competitor:</h2>
-                  <select v-model='not_your_team'>
-                    <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
-                  </select>
-            </div>
+        <div class="justify-content-center">
+          <div class="p-1">
+            <h2 class="display-8">Competitor:</h2>
+                <select v-model='not_your_team'>
+                  <option v-for='team in teams' :value='team.id'>{{ team.name }}</option>
+                </select>
           </div>
         </div>
       </div>
     </section>
 
-  <a href v-on:click="createGame" class="btn btn-primary btn-xl rounded-pill mt-5">Play Ball!</a>
+  <a v-on:click="createGame" class="btn btn-primary btn-xl rounded-pill mt-5">Play Ball!</a>
   <hr>
 
   </div>
