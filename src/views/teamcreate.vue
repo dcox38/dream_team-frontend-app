@@ -116,7 +116,7 @@
       </div>
     </section>
 
-  <a v-on:click="createTeam" class="btn btn-primary btn-xl rounded-pill mt-5">Create Team</a>
+  <a v-on:click="createTeam" class="btn btn-success btn-xl rounded-pill mt-5">Create Team</a>
 <hr>
 </div>
 </template>

@@ -41,7 +41,7 @@
       </div>
     </section>
 
-  <a v-on:click="createGame" class="btn btn-primary btn-xl rounded-pill mt-5">Play Ball!</a>
+  <a v-on:click="createGame" class="btn btn-success btn-xl rounded-pill mt-5">Play Ball!</a>
   <hr>
 
   </div>
